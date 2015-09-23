@@ -1,11 +1,12 @@
 //
-// describe('Contact', function() {
-//   it("creates a new contact with the given specifications", function() {
-//     var testContact = new Contact("Rita","Moreno");
-//     expect(testContact.firstName).to.equal("Rita");
-//     expect(testContact.lastName).to.equal("Moreno");
-//     expect(testContact.addresses).to.eql([]);
-//   });
+describe('Ticket', function() {
+  it("creates a new movie ticket", function() {
+    var testTicket = new Ticket("Spiderman","12:00pm","10");
+    expect(testTicket.newMovie).to.equal("Spiderman");
+    expect(testTicket.newTime).to.equal("12:00pm");
+    expect(testTicket.newAge).to.equal("10");
+  });
+});
 //
 //   it("adds the fullName method to all contacts", function() {
 //     var testContact = new Contact("Sherlock","Holmes");
@@ -13,10 +14,10 @@
 //   });
 // });
 //
- describe('Ticket', function() {
+ describe('calculateTicket', function() {
 
-  it("creates a new movie ticket", function() {
-    var testTicket = new Ticket("Spiderman","12:00pm","10");
-    // expect(testAddress.fullAddress()).to.equal("123 Main St, Test City, Test State");
+  it("calculates ticket price based on age", function() {
+    var calculateTestTicket = new calculateTicket("Spiderman","12:00pm","10");
+    expect(calculateTestTicket.newTicketPrice).to.equal("8");
   });
 });
